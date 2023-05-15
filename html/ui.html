@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <link rel="stylesheet" type="text/css" href="css/main.css" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.0/css/pro.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Ovo&family=Press+Start+2P&family=Source+Sans+Pro&family=VT323&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    </head>
+    <body style="background-color: rgba(0, 0, 0, 0);">
+        <audio id="mousehover" src="audios/mousehover.mp3"></audio>
+        <audio id="screenshot" src="audios/screenshot.mp3"></audio>
+        <div class="container">
+            <div class="photomodecontainer">
+                <div class="photomodeinnercontainer">
+                    <div class="photomodeheader"></div>
+                    <!-- -- slider stuff -->
+                    <div class="photomodeslidercontainertitle">Move horizontaly</div>
+                    <div class="photomodeslidercontainer">
+                        <i class="fa-solid fa-up-to-line"></i>
+                        <div class="slidercontainer" id="movementone"></div>
+                    </div>
+                    <div class="photomodeslidercontainertitle">Move verticaly</div>
+                    <div class="photomodeslidercontainer">
+                        <i class="fa-solid fa-left-to-line"></i>
+                        <div class="slidercontainer" id="movementtwo"></div>
+                    </div>
+                    <div class="photomodeslidercontainertitle">Move longitude</div>
+                    <div class="photomodeslidercontainer">
+                        <i class="fa-solid fa-up-down"></i>
+                        <div class="slidercontainer" id="movementthree"></div>
+                    </div>
+                    <div class="photomodeslidercontainertitle">Change Fov</div>
+                    <div class="photomodeslidercontainer">
+                        <i class="fa-solid fa-arrows-to-dot"></i>
+                        <div class="slidercontainer" id="movementfour"></div>
+                    </div>
+                    <div class="photomodebottomcontainer">
+                        <div class="photomodefilterscontainer">
+                            <div class="photomodefilterscontainertitle">
+                                Filters
+                                <input id="filtersearch" placeholder="Search" type="all" cols="30" rows="10" class="cameramodesearch" spellcheck="true" required></input>
+                            </div>
+                            <div class="photomodeslidercontainer">
+                                <i class="fa-solid fa-arrow-up-wide-short"></i>
+                                <div class="slidercontainer" id="movementfive"></div>
+                            </div>
+                            <div class="photomodefiltersinnercontainer"></div>
+                        </div>
+                        <div class="photomodebuttonscontainer">
+                            <div class="photomodebuttons" id="camerablur"><i class="fa-solid fa-droplet"></i></div>
+                            <div class="photomodebuttons" id="resetcameramovement"><i class="fa-solid fa-rotate-right"></i></div>
+                            <div class="photomodebuttons" id="takescreenshot"><i class="fa-solid fa-camera-viewfinder"></i></div>
+                            <div class="photomodebuttons" id="gallery" style="margin-bottom: 0px;"><i class="fa-solid fa-rectangle-history-circle-user"></i></div>
+                        </div>
+                    </div>
+                    <div class="gallerycontainer" style="display: none;">
+                        <div class="galleryheader">
+                            Gallery
+                            <input id="gallerysearch" placeholder="Search" type="all" cols="30" rows="10" class="gallerysearch" spellcheck="true" required></input>
+                        </div>
+                        <div class="galleryinnercontainer">
+                            <div class="galleryleftcontainer">
+                                <div class="gallerysavedbuttonscontainer">
+                                    <div class="gallerysavedbutton" style="border-radius: 2vh 0vh 0vh 2vh;"><i class="fa-sharp fa-solid fa-circle-xmark"></i> Delete</div>
+                                    <div class="gallerysavedbutton"><i class="fa-solid fa-clipboard"></i> Copy</div>
+                                </div>
+                                <i class="fa-solid fa-image"></i>
+                                <div class="galleryleftinnerimagecontainer">
+                                    <div class="galleryleftinnerimage"></div>
+                                </div>
+                            </div>
+                            <div class="galleryrightcontainer"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flashingcontainer"></div>
+                <div class="photoeditcontainer">
+                    <div class="photoeditinnercontainer">
+                        <div class="galleryheader">Latest screenshot</div>
+                        <div class="photoeditimage">
+                            <img src="https://media.discordapp.net/attachments/1022142703175225426/1031942414262341812/screenshot.jpg"></img>
+                        </div>
+                        <div class="editphotobuttonscontainer">
+                            <div class="editphotobutton" style="border-radius: 2vh 0vh 0vh 2vh;"><i class="fa-sharp fa-solid fa-circle-xmark"></i> Cancel</div>
+                            <div class="editphotobutton"><i class="fa-solid fa-clipboard"></i> Copy</div>
+                            <div class="editphotobutton" style="border-radius: 0vh 2vh 2vh 0vh;"><i class="fa-solid fa-floppy-disk"></i> Save</div>
+                        </div>
+                    </div>
+                    <div class="savephotocontainer">
+                        <div class="savephotoinnercontainer">
+                            <div class="galleryheader">Save latest screenshot <div class="savingclosebutton" id="closesaving"><i class="fa-solid fa-circle-xmark"></i></div></div>
+                            <input id="newpicturename" placeholder="Type your new photo name" type="all" cols="30" rows="10" class="cameramodesearch" spellcheck="true" required></input>
+                            <div class="savephotoconfirm">Confirm</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tooltipcontainer"></div>
+        </div>
+        <script src="js/app.js" type="text/javascript"></script>
+    </body>
+</html>

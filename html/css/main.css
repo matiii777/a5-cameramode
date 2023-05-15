@@ -1,0 +1,800 @@
+body {
+  font-family: 'PT Sans', sans-serif!important;
+  -webkit-touch-callout: none!important;
+  -webkit-user-select: none!important;
+  -khtml-user-select: none!important;
+  -moz-user-select: none!important;
+  -ms-user-select: none!important;
+  user-select: none!important;
+  outline: 0;
+}
+
+::-webkit-scrollbar {
+	width: 6px!important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(32,132,152)!important;
+}
+
+.container {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  overflow: hidden;
+}
+
+/* -- camera mode -- */
+
+.photomodecontainer {
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+}
+
+.photomodeinnercontainer {
+  position: absolute;
+  height: auto;
+  width: 28vh;
+  top: 50%;
+  right: 6vh;
+  transform: translateY(-50%);
+}
+
+.photomodeheader {
+  position: relative;
+  height: 2vh;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgb(32,132,152);
+
+  font-size: 1.22vh;
+  text-align: left;
+  text-indent: 0.60vh;
+  font-weight: bold;
+  line-height: 2vh;
+  color: rgb(4, 4, 4);
+}
+
+.photomodeslidercontainer {
+  position: relative;
+  height: 2.80vh;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  margin-bottom: 2px;
+  background-color: rgb(32, 32, 32);
+}
+
+.photomodeslidercontainer:hover {
+  filter: brightness(1.12);
+}
+
+.photomodeslidercontainertitle {
+  position: relative;
+  height: 1.80vh;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgb(42, 42, 42);
+
+  font-size: 0.92vh;
+  text-align: left;
+  text-indent: 0.60vh;
+  font-weight: bold;
+  line-height: 1.80vh;
+  color: rgb(244, 244, 244);
+}
+
+.photomodeslidercontainer > i {
+  position: absolute;
+  height: 2vh;
+  width: 2vh;
+  top: 0.40vh;
+  left: 0.40vh;
+
+  font-size: 1.48vh;
+  color: rgb(32,132,152);
+  text-align: center;
+  line-height: 2.20vh;
+  text-indent: 0vh;
+}
+
+.slidercontainer {
+  position: absolute;
+  height: 4vh;
+  width: 80%;
+  margin-bottom: 2vh;
+  top: 0vh;
+  left: 0vh;
+}
+
+.ui-slider-handle {
+  position: absolute;
+  height: 1.22vh!important;
+  width: 1.22vh!important;
+  top: -104%!important;
+  left: 0vh;
+  border-radius: 50%!important;
+  border: none!important;
+  background-color: rgb(32,132,152)!important;
+  cursor: grab!important;
+}
+.ui-slider-handle:hover {
+  filter: brightness(0.80);
+}
+.ui-slider-handle:active {
+  cursor: grabbing!important;
+}
+.ui-slider-handle:focus {
+  border: none!important;
+  outline: none!important;
+}
+.ui-slider-range-min {
+  position: absolute;
+  height: 0.40vh!important;
+  background-color: rgb(32,132,152)!important;
+  border-radius: 4vh!important;
+}
+.ui-slider-horizontal {
+  position: absolute;
+  height: 0.40vh!important;
+  width: 84%!important;
+  top: 1.20vh!important;
+  left: 12%!important;
+  border-radius: 2vh!important;
+  border: none!important;
+  background-color: rgba(144, 144, 144)!important;
+  cursor: pointer!important;
+}
+
+.photomodebottomcontainer {
+  position: relative;
+  float: inline-start;
+  display: flex;
+  flex-direction: row;
+  height: 22vh;
+  width: 100%;
+  bottom: 0vh;
+  right: 0vh;
+  margin-bottom: 2px;
+}
+
+.photomodefilterscontainer {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  margin-bottom: 2px;
+  margin-right: 2px;
+  background-color: rgb(32, 32, 32);
+}
+
+.photomodefiltersinnercontainer {
+  position: relative;
+  height: 16.20vh;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.photomodefilterbutton {
+  position: relative;
+  float: inline-start;
+  height: 2vh;
+  width: 96%;
+  top: 0vh;
+  left: 2%;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  background-color: rgb(42, 42, 42);
+  cursor: pointer;
+
+  font-size: 1.22vh;
+  text-align: left;
+  text-indent: 1.04vh;
+  font-weight: bold;
+  line-height: 2vh;
+  color: rgb(244, 244, 244);
+}
+
+.photomodefilterbuttondot {
+  position: relative;
+  float: inline-start;
+  height: 1.08vh;
+  width: 1.08vh;
+  top: 50%;
+  left: 0.44vh;
+  transform: translateY(-50%);
+  background-color: rgb(4, 4, 4);
+  border-radius: 50%;
+  overflow: hidden;
+
+  font-size: 0.22vh;
+  text-align: left;
+  text-indent: 1.04vh;
+  font-weight: bold;
+  line-height: 2vh;
+  color: rgba(0, 0, 0, 0);
+}
+
+.photomodefilterbutton:hover {
+  filter: brightness(1.20);
+}
+
+.photomodefilterscontainertitle {
+  position: relative;
+  height: 1.80vh;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgb(42, 42, 42);
+
+  font-size: 0.92vh;
+  text-align: left;
+  text-indent: 0.60vh;
+  font-weight: bold;
+  line-height: 1.80vh;
+  color: rgb(244, 244, 244);
+}
+
+.cameramodesearch {
+  position: relative;
+  float: inline-end;
+  height: 100%;
+  width: 80%;
+  padding-left: 0.20vh;
+  top: 0vh;
+  right: 0vh;
+  margin-bottom: 2px;
+  background-color: rgb(42, 42, 42);
+  border: none;
+  border-left: 2px solid rgb(32, 32, 32);
+  outline: none!important;
+  resize: none;
+  overflow: hidden;
+
+  font-size: 0.92vh;
+  text-align: left;
+  text-indent: 0.60vh;
+  font-weight: bold;
+  line-height: 1.80vh;
+  color: rgb(244, 244, 244);
+}
+
+.cameramodesearch:hover {
+  filter: brightness(1.20);
+}
+
+.cameramodesearch::placeholder {
+  font-size: 0.92vh;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.42vh;
+  color: rgb(122, 122, 122);
+  transition: 0.12s;
+}
+
+.photomodebuttonscontainer {
+  position: relative;
+  float: inline-start;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 28%;
+  bottom: 0vh;
+  right: 0vh;
+  cursor: pointer;
+}
+
+.photomodebuttons {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  margin-bottom: 2px;
+  background-color: rgb(32, 32, 32);
+  cursor: pointer;
+
+  font-size: 1.32vh;
+  text-align: center;
+  font-weight: bold;
+  line-height: 4.34vh;
+  color: rgb(244, 244, 244);
+}
+
+.photomodebuttons > i {
+  position: absolute;
+  height: 2vh;
+  width: 4vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  font-size: 2vh;
+  text-align: center;
+  font-weight: bold;
+  line-height: 2vh;
+  color: rgb(244, 244, 244);
+}
+
+.photomodebuttons:hover {
+  filter: brightness(1.40);
+}
+
+.photomodebuttons:active {
+  background-color: rgb(32,132,152);
+}
+
+.savedsets {
+  position: relative;
+  float: inline-start;
+  height: 16vh;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgb(32, 32, 32);
+}
+
+.gallerycontainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 320%;
+  top: 0vh;
+  right: 100%;
+  margin-right: 2px;
+  background-color: rgb(32, 32, 32);
+  animation: showgallery 0.12s ease-in-out forwards;
+}
+
+@keyframes showgallery {
+  0%{width: 20%; opacity: 0;}
+  100%{width: 320%; opacity: 1;}
+}
+
+.galleryheader {
+  position: relative;
+  float: inline-start;
+  height: 2vh!important;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgb(32,132,152);
+
+  font-size: 1.22vh;
+  text-align: left;
+  text-indent: 0.60vh;
+  font-weight: bold;
+  line-height: 2vh;
+  color: rgb(4, 4, 4);
+}
+
+.galleryinnercontainer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 96%;
+  width: 100%;
+  top: 0vh;
+  right: 0vh;
+}
+
+.galleryrightcontainer {
+  position: relative;
+  float: inline-start;
+  height: 100%;
+  width: 16vh!important;
+  top: 0vh;
+  right: 0vh;
+  border-left: 6px solid rgb(42,42,42);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.galleryrightcontainer::-webkit-scrollbar {
+  width: 6px!important;
+  background-color: rgb(42,42,42);
+}
+
+.galleryrightcontainer::-webkit-scrollbar-thumb {
+  background-color: rgb(32,132,152)!important;
+}
+
+.galleryleftcontainer {
+  position: relative;
+  float: inline-start;
+  height: 100%;
+  width: 100%;
+  top: 0vh;
+  right: 0vh;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  animation: showleftfullphoto 0.12s ease-in-out forwards;
+}
+
+@keyframes showleftfullphoto {
+  0%{opacity: 0;}
+  80%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.galleryleftinnerimagecontainer {
+  position: absolute;
+  height: 88%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(244, 244, 244, 0.028);
+  overflow: hidden;
+}
+
+.galleryleftinnerimage {
+  position: absolute;
+  height: auto;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.galleryleftinnerimage > img {
+  position: relative;
+  float: inline-start;
+  height: auto;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  cursor: grab;
+}
+
+.galleryleftinnerimage > img:active {
+  cursor: grabbing;
+}
+
+.galleryleftcontainer > i {
+  position: absolute;
+  height: auto;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 12.22vh;
+  text-align: center;
+  color: rgb(52, 52, 52);
+}
+
+.galleryphotocontainer {
+  position: relative;
+  float: inline-start;
+  height: 8vh;
+  width: 94%;
+  top: 0vh;
+  left: 0vh;
+  margin: 4px;
+  background-color: rgb(42,42,42);
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.galleryphotocontainer:hover {
+  filter: brightness(1.28);
+}
+
+.galleryphotocontainer > img{
+  position: relative;
+  float: inline-start;
+  height: 100%;
+  width: auto;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.galleryphotoheader {
+  position: absolute;
+  height: 2vh;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgba(4, 4, 4, 0.646);
+  border-bottom: 2px solid rgb(4, 4, 4);
+  backdrop-filter: blur(4px);
+  z-index: 200;
+
+  font-size: 1.12vh;
+  text-align: left;
+  text-indent: 0.60vh;
+  font-weight: bold;
+  line-height: 2vh;
+  color: rgb(244, 244, 244);
+}
+
+.gallerysearch {
+  position: relative;
+  float: inline-end;
+  height: 100%;
+  width: 13.88vh;
+  padding-left: 0.20vh;
+  top: 0vh;
+  right: 0vh;
+  margin-bottom: 2px;
+  background-color: rgba(4, 4, 4, 0);
+  border: none;
+  border-left: 6px solid rgba(4, 4, 4, 0.226);
+  outline: none!important;
+  resize: none;
+  overflow: hidden;
+
+  font-size: 0.92vh;
+  text-align: left;
+  text-indent: 0.60vh;
+  font-weight: bold;
+  line-height: 1.80vh;
+  color: rgb(4, 4, 4);
+}
+
+.gallerysearch:hover {
+  filter: brightness(1.20);
+}
+
+.gallerysearch::placeholder {
+  font-size: 0.92vh;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.42vh;
+  color: rgb(42, 42, 42);
+  transition: 0.12s;
+}
+
+.flashingcontainer {
+  position: absolute;
+  display: none;
+  height: 180%;
+  width: 140%;
+  top: -40%;
+  left: -20%;
+  border-radius: 50%;
+  animation: flashing 0.28s ease-in-out forwards;
+}
+
+@keyframes flashing {
+  0%{box-shadow:inset 0px 0px 0px 0px rgb(4, 4, 4);}
+  60%{box-shadow:inset 0px 0px 282vh 122vh rgb(4, 4, 4);}
+  100%{box-shadow:inset 0px 0px 0px 0px rgb(4, 4, 4);}
+}
+
+.photoeditcontainer {
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgba(4, 4, 4, 0.846);
+}
+
+.photoeditinnercontainer {
+  position: absolute;
+  height: 84%;
+  width: auto;
+  max-width: 100%;
+  min-width: 40vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(32, 32, 32);
+}
+
+.photoeditimage {
+  position: relative;
+  float: inline-start;
+  height: 100%;
+  width: auto;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgb(32, 32, 32);
+}
+
+.photoeditimage > img {
+  position: relative;
+  float: inline-start;
+  height: 100%;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(32, 32, 32);
+  pointer-events: none;
+}
+.editphotobuttonscontainer {
+  position: absolute;
+  height: auto;
+  width: auto;
+  bottom: 2vh;
+  right: 4vh;
+  overflow: hidden;
+}
+.editphotobutton {
+  position: relative;
+  float: inline-start;
+  height: 2vh;
+  width: auto;
+  padding: 2vh;
+  padding-top: 0.40vh;
+  padding-bottom: 0.40vh;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgb(52, 52, 52);
+  margin-left: 2px;
+  cursor: pointer;
+
+  font-size: 1.62vh;
+  text-align: center;
+  font-weight: bold;
+  line-height: 2vh;
+  color: rgb(244, 244, 244);
+}
+
+.editphotobutton > i {
+  pointer-events: none;
+}
+
+.editphotobutton:hover {
+  filter: brightness(1.40);
+}
+
+.savephotocontainer {
+  position: absolute;
+  display: none;
+  height: 100%;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
+.savephotoinnercontainer {
+  position: absolute;
+  height: 8vh;
+  width: 22vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(32, 32, 32);
+}
+
+.savingclosebutton {
+  position: absolute;
+  height: 100%;
+  width: 2vh;
+  top: 0vh;
+  right: 0vh;
+  margin-right: 2px;
+  cursor: pointer;
+  transition: 0.12s;
+}
+
+.savingclosebutton > i {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0vh;
+  left: 0vh;
+
+  font-size: 1.28vh;
+  color: rgb(4, 4, 4);
+  text-align: center;
+  line-height: 2.20vh;
+  text-indent: 0vh;
+}
+
+.savingclosebutton:hover > i {
+  font-size: 1.40vh;
+}
+
+.cameramodesearch {
+  position: relative;
+  float: inline-start;
+  height: 3.20vh;
+  width: 100%;
+  padding-left: 0.20vh;
+  top: 0vh;
+  right: 0vh;
+  background-color: rgb(42, 42, 42);
+  border: none;
+  border-left: 2px solid rgb(32, 32, 32);
+  outline: none!important;
+  resize: none;
+  overflow: hidden;
+
+  font-size: 0.92vh;
+  text-align: left;
+  text-indent: 0.60vh;
+  font-weight: bold;
+  line-height: 1.80vh;
+  color: rgb(244, 244, 244);
+}
+
+.cameramodesearch:hover {
+  filter: brightness(1.20);
+}
+
+.savephotoconfirm {
+  position: absolute;
+  height: 2vh;
+  width: auto;
+  padding-left: 1.20vh;
+  padding-right: 1.20vh;
+  bottom: 0.40vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(32,132,152);
+  border-radius: 2vh 2vh 2vh 2vh;
+  cursor: pointer;
+
+  font-size: 1.28vh;
+  color: rgb(4, 4, 4);
+  font-weight: bolder;
+  text-align: center;
+  line-height: 2vh;
+  text-indent: 0vh;
+}
+
+.savephotoconfirm:hover {
+  filter: brightness(1.20);
+}
+
+.gallerysavedbuttonscontainer {
+  position: absolute;
+  display: none;
+  height: auto;
+  width: auto;
+  bottom: 0vh;
+  right: 0vh;
+  overflow: hidden;
+}
+.gallerysavedbutton {
+  position: relative;
+  float: inline-start;
+  height: 2vh;
+  width: auto;
+  padding: 2vh;
+  padding-top: 0.40vh;
+  padding-bottom: 0.40vh;
+  top: 0vh;
+  left: 0vh;
+  background-color: rgb(52, 52, 52);
+  margin-left: 2px;
+  cursor: pointer;
+
+  font-size: 1.62vh;
+  text-align: center;
+  font-weight: bold;
+  line-height: 2vh;
+  color: rgb(244, 244, 244);
+}
+
+.gallerysavedbutton > i {
+  pointer-events: none;
+}
+
+.gallerysavedbutton:hover {
+  filter: brightness(1.40);
+}
