@@ -1,6 +1,8 @@
 # a5-cameramode
 Our Standalone Camera Mode script for FiveM
 
+![picmain11](https://cdn.discordapp.com/attachments/820745193509748736/1107663754520428564/scripttemplate.png)
+
 A simple Camera Mode script that allows your players to take amazing pictures using in-game filters.
 
 Preview: https://youtu.be/Ew6Cj-LaRcE
