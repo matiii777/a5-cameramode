@@ -6,6 +6,10 @@ Our Standalone Camera Mode script for FiveM
 A simple Camera Mode script that allows your players to take amazing pictures using in-game filters.
 
 Preview: https://youtu.be/Ew6Cj-LaRcE
+Tebex: https://a5-scripts.tebex.io/
+Docs: https://a5-scripts-store.gitbook.io/
+
+Usage: Command /cameramode
 
 ![picmain](https://i.imgur.com/fHyu2Ch.jpg)
 ![picture1](https://media.discordapp.net/attachments/1032690839501156382/1083826741354704966/screenshot.jpg)
