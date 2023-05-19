@@ -2,6 +2,7 @@ Shared = {}
 
 --- Camera Mode
 Shared.DiscordWebHook = "YOUR-WEBHOOK-HERE" -- Put your webhook here to save screenshots to discord https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+Shared.Cameramodeheader = 'A5 Camera Mode' -- camera mode header text
 Shared.MovingX = {Min = -14, Max = 14} -- the maximum and minimum movement horizontaly
 Shared.MovingY = {Min = -14, Max = 14} -- the maximum and minimum movement verticaly
 Shared.MovingZ = {Min = 0, Max = 8} -- the maximum and minimum movement longitudely ?
