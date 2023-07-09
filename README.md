@@ -1,4 +1,7 @@
 # a5-cameramode
+
+<a href="//www.dmca.com/Protection/Status.aspx?ID=3ec9f740-cfb9-4f8e-b516-d4593bca1840" title="DMCA.com Protection Status" class="dmca-badge"> <img src ="https://images.dmca.com/Badges/dmca-badge-w250-5x1-01.png?ID=3ec9f740-cfb9-4f8e-b516-d4593bca1840"  alt="DMCA.com Protection Status" /></a>  <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js%22%3E </script>
+
 Our Standalone Camera Mode script for FiveM
 
 ![picmain11](https://cdn.discordapp.com/attachments/820745193509748736/1107663754520428564/scripttemplate.png)
